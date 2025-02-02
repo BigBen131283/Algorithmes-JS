@@ -11,7 +11,7 @@ function additionCorrection(arr) {
         return arr[0]
     }
     else{
-        return arr.pop() + addition(arr)
+        return arr.pop() + additionCorrection(arr)
     }
 
 }

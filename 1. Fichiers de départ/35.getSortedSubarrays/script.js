@@ -1,5 +1,13 @@
 function getSortedSubarrays(arr) {
+  
+  const uniqueValues = [...new Set(arr)]
+  // [2, 1]  
 
+  const sortedSubarrays = []
+
+  uniqueValues.forEach(uniqueVal => sortedSubarrays.push(arr.filter(baseArrayElement => baseArrayElement === uniqueVal)))
+  
+  return sortedSubarrays
 }
 
 

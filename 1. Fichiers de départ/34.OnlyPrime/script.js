@@ -1,5 +1,24 @@
 function addPrime(num) {
 
+  if(num === 1) {
+    return 0
+  }
+
+  function isPrime(number) {
+    for(let i = 2; i < number; i++) {
+      if(number % i  === 0) {
+        return false
+      }
+    }
+    return true
+  }
+
+  if(isPrime(num)) {
+    return num + addPrime(num - 1)
+  }
+  else {
+    return addPrime(num - 1)
+  }
 
 }
 
